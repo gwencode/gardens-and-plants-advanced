@@ -1,14 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Gardens</h1>
+<div class="container">
+  <h1>Gardens</h1>
 
-<div id="gardens">
-  <% @gardens.each do |garden| %>
-    <%= render garden %>
-    <p>
-      <%= link_to "Show this garden", garden %>
-    </p>
-  <% end %>
+  <div id="gardens">
+    <% @gardens.each do |garden| %>
+      <%= render garden %>
+      <p>
+        <%= link_to "Show this garden", garden %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New garden", new_garden_path %>
 </div>
 
-<%= link_to "New garden", new_garden_path %>
+
+<%# Faire le schéma de DB %>
+<%# Générer le model Tag %>
+<%# Générer le model de la table de jointure PlantTag %>
+<%# Ajouter des validations et associations %>
+<%# Tester dans rails c %>
