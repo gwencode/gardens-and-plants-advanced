@@ -38,3 +38,16 @@ Plant.create!(
   image_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/plants/dieffenbachia.jpg",
   garden: other
 )
+
+puts "#{Plant.count} Plants created !"
+
+puts "Creating Tags..."
+
+names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
+# names = ["Fruit tree", "Cactus", "Greasy plant", "Flower", "Ferns", "Conifers"]
+
+names.each do |name|
+  Tag.create(name: name)
+end
+
+puts "#{Tag.count} Tags created !"
